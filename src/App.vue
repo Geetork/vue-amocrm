@@ -1,26 +1,33 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <main class="container mx-auto bg-gray-50 rounded-xl p-4 font-mono space-y-4 overflow-x-auto">
+    <CustomHeader />
+    <DealsTable />
+  </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import './style.css';
+import CustomHeader from '@/components/CustomHeader.vue';
+import DealsTable from '@/components/DealsTable.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    CustomHeader,
+    DealsTable,
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  body {
+    background-color: #f0f0f0;
+  }
+
+  #app {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 50px 10px;
+  }
 </style>
